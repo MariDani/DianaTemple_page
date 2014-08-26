@@ -56,10 +56,22 @@ div .thumbnail {
 }
 
 
-@media (min-width: 922px) {
+@media (min-width: 1024px) {
+	.container {
+		min-height: 960px;
+	}
+}
+
+@media (min-width: 922px) and (max-width: 768px){
+	.container {
+		min-height: 825px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 922px) {
+	.container {
+		min-height: 510px;
+	}
 }
 
 @media (max-width: 768px) {
