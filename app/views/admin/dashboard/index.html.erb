@@ -1,0 +1,41 @@
+<!--page heading-->
+<div class="page-header center_text" >
+   <h1>Admin</h1>
+</div>
+
+<!-- Content -->
+<div class="row" style="padding:20px">
+  <div class="col-md-10 col-md-offset-1">
+  	<table class="table table-striped table-hover ">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th>User email</th>
+	      <th>Aproved</th>
+	      <th>Disaproved</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% @users.each do |user| %>
+	    <tr>
+	      <td><%= user.id %></td>
+	      <td><%= user.email %></td>
+	      <td><% if user.aproved %>
+	      	<%= link_to "aproved", aproved_admin_dashboard_index_path(id: user.id), class: "btn btn-success btn-sm" %>
+	      	<% else %>
+			<%= link_to "aproved", aproved_admin_dashboard_index_path(id: user.id), class: "btn btn-default btn-sm" %>
+			<% end %>
+			</td>
+	      <td><% if user.aproved %>
+	      	<%= link_to "disaproved", disaproved_admin_dashboard_index_path(id: user.id), class: "btn btn-default btn-sm" %>
+	      	<% else %>
+			<%= link_to "disaproved", aproved_admin_dashboard_index_path(id: user.id), class: "btn btn-danger btn-sm" %>
+			<% end %>
+			</td>
+	    </tr>
+	    <% end %>
+	  </tbody>
+	</table>  
+	</div>
+</div>
+

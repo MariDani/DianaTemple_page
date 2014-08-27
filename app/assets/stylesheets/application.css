@@ -55,6 +55,9 @@ div .thumbnail {
 	background-color: white;
 }
 
+.aproved {
+	color: green;
+}
 
 @media (min-width: 1024px) {
 	.container {

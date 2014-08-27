@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   get 'pages/reconstruction'
   get 'pages/unauthorized'
 
+  namespace "admin" do
+    resources :dashboard, only: :index do
+      get 'aproved', on: :collection
+      get 'disaproved', on: :collection
+    end
+  end
+
   root 'pages#reconstruction'
 
 

@@ -12,10 +12,7 @@ class PagesController < ApplicationController
   end
 
  private  
-	  def aproved_only
-	  	if current_user.aproved
-	  	else 
-	  		redirect_to '/pages/unauthorized'
-	  	end
-	  end
-	end
+  def aproved_only
+  		redirect_to '/pages/unauthorized' unless current_user.aproved
+  end
+end
