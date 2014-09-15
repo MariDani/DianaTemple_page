@@ -10,7 +10,9 @@
 	  <thead>
 	    <tr>
 	      <th>#</th>
-	      <th>User email</th>
+	      <th>User name</th>
+	      <th>Email</th>
+	      <th>institution</th>
 	      <th>Aproved</th>
 	      <th>Disaproved</th>
 	    </tr>
@@ -19,7 +21,9 @@
 	  	<% @users.each do |user| %>
 	    <tr>
 	      <td><%= user.id %></td>
+	      <td><%= user.name %></td>
 	      <td><%= user.email %></td>
+	      <td><%= user.institution %></td>
 	      <td><% if user.aproved %>
 	      	<%= link_to "aproved", aproved_admin_dashboard_index_path(id: user.id), class: "btn btn-success btn-sm" %>
 	      	<% else %>
