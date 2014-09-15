@@ -1,6 +1,6 @@
 class Admin::DashboardController < ApplicationController
 	before_action :authenticate_user!
-	before_action :aproved_only
+	before_action :admin_only
 
 	def index
 		@users = User.all
@@ -21,7 +21,7 @@ class Admin::DashboardController < ApplicationController
 	end
 
 	private  
-  	def aproved_only
-  		redirect_to '/pages/unauthorized' unless current_user.aproved
+  	def admin_only
+  		redirect_to '/pages/reconstruction' unless current_user.admin
   	end
 end
