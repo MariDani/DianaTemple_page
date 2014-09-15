@@ -30,7 +30,7 @@
 
 html body {
 	background-size: 100%; 
-	background: #ffffff url('/assets/sancturay_photo.jpg') no-repeat center center;
+	background: #ffffff url(/assets/sancturay_photo.jpg) no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
