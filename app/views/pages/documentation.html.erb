@@ -10,7 +10,8 @@
 	  <ul class="nav nav-tabs" style="margin-bottom: 15px;">
 	    <li class="active"><a href="#home" data-toggle="tab">Excavations in Nemi</a></li>
 	    <li><a href="#3D" data-toggle="tab">3D model generation</a></li>
-	    <li class="disabled"><a href="#uncertainty" data-toggle="tab">Handling of uncertainty</a></li>
+	    <li><a href="#uncertainty" data-toggle="tab">Calculation of the uncertainty</a></li>
+	    <li><a href="#uncertaintyV" data-toggle="tab">Visualizing the uncertainty</a></li>
 	    <li><a href="#credits" data-toggle="tab">Credits</a></li>
 	    <li><a</a></li>
 	  </ul>
@@ -139,10 +140,85 @@
 	    	</div>
 	    </div>
 	    <div class="tab-pane fade" id="uncertainty">
-	      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+	      	<h2>Method of quantifying the uncertainty</h2>
+	    	<div class="row">
+		    	<div class="col-md-6">	    		
+		      		<p>There are several methods using fuzzy logic for calculation of the uncertainty. Each of them has different advantages and disadvantages in terms of complexity or suitable usage. In order to find the best solution for the case study of the Sanctuary of Diana in Nemi, several approaches were combined. Niccolucci et al. (2004) claim that creation of an archaeological model is a stepwise process starting with an initial model <i>M<sub>0</sub></i> where each step represents addition of a new detail <i>m<sub>n</sub></i>, so at step <i>n</i> a model <i>M<sub>n+1</sub></i> is created by adding detail <i>m<sub>n</sub></i> to the model <i>M<sub>n</sub></i>. This description is perfect for combination with the characteristics of procedural modeling used in CityEngine. To define the correct terminology, term “newly added detail” equals to “newly added object”. As Niccolucci suggested, the scale for reliability has been established as an interval [0, 1], where 0 means the most uncertain object that equals a totally unreliable object, and 1 represents the most certain or fully reliable object (Niccolucci</p>
+		    	</div>
+		    	<div class="col-md-6">	    		
+		      		<p>et al., 2004). Furthermore, the overall object’s reliability is divided into three components in order to specify the varying uncertainty of its parameters. The idea of the reliability components is based on the correction factors introduced by Tepavcevic and Stojakovic (2013) and reliability components presented by Niccolucci et al. (2004). The first positional component of reliability <i>r<sup>(p)</sup></i> describes the uncertainty of the object’s placement. Secondly, the dimensional component <i>r<sup>(d)</sup></i> presents the degree of reliability related to the knowledge of the object’s dimension. Lastly, style reliability <i>r<sup>(s)</sup></i> evaluates the style of added objects, for instance the reliability of the structure of the column shaft. Subsequently, the overall reliability of an object <i>r<sub>n</sub></i> is calculated like the minimum of its reliability components as demonstrated on the following formula</p>
+		      		<center><i>r<sub>n</sub> = min(r<sup>(p)</sup><sub>n</sub> , r<sup>(d)</sup><sub>n</sub> , r<sup>(s)</sup><sub>n</sub> )</i></center>
+		    	</div>
+		    </div>
+		    <br>
+		    <div class="row">
+		    	<center>
+		    		<%= image_tag 'table.JPG', class: "img-responsive img-centre" %>
+		    	</center>
+		    </div>
+		    <br>
+		    <div class="row">
+		    	<div class="col-md-6">	    		
+		      		<p>Consequently, the calculation of the overall reliability for the entire model <i>r(M<sub>n+1</sub>)</i>, defined on the formula bellow, is the minimum of its reliability components and the reliability of the previous model overall reliability <i>r<sub>n</sub></i>. Where <i>r<sub>n</sub></i> is equal <i>r(M<sub>n</sub>)</i>.</p>
+		      		<center><i>r(M<sub>n+1</sub>) = min(r<sup>(p)</sup><sub>n+1</sub> , r<sup>(d)</sup><sub>n+1</sub> , r<sup>(s)</sup><sub>n+1</sub> )</i></center>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<p>Numerical evaluation of each reliability component was determined via a formal discussion with the archaeologists, resulting in the table above this paragraph containing 21 steps of model generation. This means that 21 objects were stepwise added to the model in order to generate the final virtual reconstruction of the Diana temple. Each of these objects includes the three reliability components described earlier.</p>	    	
+		    	</div>
+		    </div>
+		    <br>
+		    <h2>Advantages and disadvantages of the method used</h2>
+	    	<div class="row">
+		    	<div class="col-md-6">	    		
+		      		<p>Finally, it is important to mention the significant disadvantage of this method and the solution to minimize this negative effect. The disadvantage lies in the strong dependence of the resulting  reliability value on the order in which the details/objects are added. To overcome this issue and enable better results, the objects should not be added randomly. Added objects need to be divided in two groups: construction elements and decoration elements. Then, the construction objects <i>m<sub>1-11</sub></i> are added</p>
+		    	</div>
+		    	<div class="col-md-6">	  
+		    		<p>according to the order of the graduating temple reconstruction, for instance walls are added after the podium is generated and before the roof is created. Next, the decoration elements <i>m<sub>12-21</sub></i> are added, nevertheless they are ordered according their reliability values so that the more reliable the object is, the sooner it is added. This approach will maintain higher model reliability in the sequence of the consecutive models for as long as possible.</p>  	
+		    	</div>
+		    </div>
+		   	<br>
+	    	<h2>References</h2>
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<p>Niccolucci, F. and S. Hermon. <i>A fuzzy logic approach to reliability in archaeological virtual reconstruction.</i> In: Proc. of the 32nd International Conference on Computer Applications and  Quantitative Methods in Archaeology. 2004, pp. 26–33</p>
+	    			<p>Tepavcevic, B. and V. Stojakovic. <i>Procedural modeling in architecture based on statistical and fuzzy inference.</i> In: Automation in Construction, vol. 35 (2013), pp. 329–337</p>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class="tab-pane fade" id="uncertaintyV">
+	    	<h2>Method of visualizing the uncertainty</h2>
+	      	<div class="row">
+		    	<div class="col-md-7">
+		    		<p>The goal of uncertainty visualization considering the visualization limits of the CityEngine software should be determined in order to choose the suitable visualization techniques. The first goal of the uncertainty visualization of the Diana Temple is to communicate the existence of the uncertainty to the audience. Secondly, it is necessary to express the level of uncertainty of the entire model and its individual parts. Taking into account the possible visualization techniques and the purpose of the uncertainty modeling, a unique combination from these methods has been created.</p>
+		    	</div>		    		
+		    	<div class="col-md-1 col-md-offset-1">
+		    		<%= image_tag 'Reliability_legend.png', class: "img-responsive img-centre" %>
+	    		</div>
+	    		<div class="col-md-1">
+		    		<%= image_tag 'Reliability_legend2.png', class: "img-responsive img-centre" %>
+	    		</div>
+	    	</div>
+	    	<br>
+	    	<div class="row">	    			    		
+		    	<div class="col-md-5">
+		    		<%= image_tag 'Green_red.JPG', class: "img-responsive img-centre" %>
+	    		</div>
+		    	<div class="col-md-7">
+		    		<p>Firstly, the uncertainty is mapped using color visualization schemes. This type of visualization is the most common technique thus implementation of this method should be easily comprehensive for the audience. In order to visually interpret the uncertainty values two schemes has been created; the first Green-Yellow-Red scheme includes changing hue attribute so the greenish tones represents more certain objects and more uncertain objects are colored in reddish tones. While using this scheme the original model colors need to be overwritten. Secondly, Opaque-Transparent scheme is implemented and alpha parameter expresses the uncertainty of the object. Thus the more transparent the more uncertain object. This solution does not require overwriting any colors, that’s why the original colors are kept.</p>
+		    	</div>	
+	    	</div>
+	    	<br>
+	    	<div class="row">
+		    	<div class="col-md-7">
+		    		<p>Next, uncertainty is expressed using side by side comparing of different models. Using this method with a combination of the CityEngine software highlights the advantages of procedural modeling in terms of time-saving generation of multiple models. The third method to map the uncertainty uses the benefits of interactive click-able objects. Fortunately, the CityEngine allows to implement the interactivity through Inspector window or while using the CityEngine Web Viewer. By clicking on desired object, additional information about the uncertainty values appears.</p>
+		    	</div>		    		
+		    	<div class="col-md-5">
+		    		<%= image_tag '16info_wv.JPG', class: "img-responsive img-centre" %>
+	    		</div>
+	    	</div>
 	    </div>
 	    <div class="tab-pane fade" id="credits">
-	      <p></p>
+	      <h2>Credits</h2>
 	      <div class="row">
 		    	<div class="col-md-8">
 		    		<p>This project was created by Mariana Danielov&aacute; as a master thesis at Technische Univerität München at the department of Cartography, Faculty of Civil, Geo and Environmental Engineering.</p>
