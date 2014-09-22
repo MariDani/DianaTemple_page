@@ -9,26 +9,17 @@
   <div class="col-md-10 col-md-offset-1">    
 	  <ul class="nav nav-tabs" style="margin-bottom: 15px;">
 	    <li class="active"><a href="#home" data-toggle="tab">Excavations in Nemi</a></li>
-	    <li class=""><a href="#profile" data-toggle="tab">3D model generation</a></li>
-	    <li class="disabled"><a>Handling of uncertainty</a></li>
-	    <li class="dropdown">
-	      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-	        Contact <span class="caret"></span>
-	      </a>
-	      <ul class="dropdown-menu">
-	        <li><a href="#dropdown1" data-toggle="tab">Action</a></li>
-	        <li class="divider"></li>
-	        <li><a href="#dropdown2" data-toggle="tab">Another action</a></li>
-	      </ul>
-	    </li>
+	    <li><a href="#3D" data-toggle="tab">3D model generation</a></li>
+	    <li><a href="#uncertainty" data-toggle="tab">Handling of uncertainty</a></li>
+	    <li><a href="#credits" data-toggle="tab">Credits</a></li>
+	    <li><a</a></li>
 	  </ul>
 	  <div id="myTabContent" class="tab-content">
-	    <div class="tab-pane fade active investigated" id="home">
-	    	<h4>Description of archaeological site in Nemi</h4>
+	    <div class="tab-pane fade active in" id="home">
+	    	<h2>Description of archaeological site in Nemi</h2>
 	    	<div class="row">
 		    	<div class="col-md-5">	    		
-		      		<p>Archaeological site investigated in this project is situated in municipality of Nemi in central Italy. Nemi
-					is located 30km south-east from Rome and it belongs to the province of Rome. The exact location of the excavations in the northern part of the Nemi basin. This basin is a former volcanic crater and its southern part is covered by the lake holding the same name Nemi. Since 1984, this area is part of the national park called Parco Naturale dei Castelli Romani.</p>
+		      		<p>The archaeological site investigated in this project is situated in the municipality of Nemi in central Italy. Nemi is located 30km south-east from Rome and it belongs to the province of Rome. Excavations are located in the northern part of the Nemi basin. This basin is a former volcanic crater and its southern part is covered by the lake having the same name Nemi. Since 1984, this area is part of the national park called Parco Naturale dei Castelli Romani (Storemyr, 2004).</p>
 		    	</div>
 		    	<div class="col-md-5 col-md-offset-2">
 		    		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23825.562959507748!2d12.706831858635084!3d41.716302865235534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDQzJzI4LjIiTiAxMsKwNDInMzMuMiJF!5e0!3m2!1sen!2scz!4v1409472268737" width="400" height="250" frameborder="0" style="border:0"></iframe>
@@ -37,25 +28,133 @@
 		    <br>
 		    <div class="row">
 		    	<div class="col-md-5">	    	
-		    		<%= image_tag 'sanctuary_photo', class: "img-responsive img-centre" %>
+		    		<%= image_tag 'sancturay_photo.jpg', class: "img-responsive img-centre" %>
 		    	</div>
 		    	<div class="col-md-5 col-md-offset-2">
-		    		<p>This project is focussing on the ruins of ancient temple named Sanctuary of Diana. Diana Nemorensis,
-					sometimes also known as Diana of Nemi or Diana of the Wood, was an Italian goodness worshipped
-					in ancient Roman religion. According to the Roman mythology, Diana was the goddess of the hunt,
-					moon, and birthing. She has been usually associated with wild animals and woodland. This temple
-					was connected by the Via Virbia to one of the most important roads in Rome called Via Appia which was connecting Rome and nowadays Brindisi. (Abo El Wafa et al., 2012) </p>
+		    		<p>This project focuses on the ruins of ancient temple named Sanctuary of Diana. Diana Nemorensis, sometimes also known as Diana of Nemi or Diana of the Wood, was an Italian goddess worshipped in ancient Roman religion (Peters et al., 2012). According to Roman mythology, Diana was the goddess of the hunt, moon, and birthing; moreover she has been usually associated with wild animals and woodland (Nemi to Nottingham, 2014). This temple was connected by the Via Virbia to one of the most important roads in Rome called Via Appia which connected Rome and the current Brindisi (Peters et al., 2012). The only remains of the Sanctuary of Diana are in the form of excavated ruins.</p>
 		    	</div>
 	    	</div>
+	    	<br>
+	    	<h2>Knowledge about the Sanctuary of Diana</h2>
+	    	<div class="row">
+	    		<div class="col-md-5">
+		    		<p>Sanctuary of Diana was sequentially constructed in three time periods. The division of the reconstruction sequences to individual phases is illustrated on the figure. However it was decided that only the third phase (orange image) will be reconstructed within the scope of this project.</p>
+		    	</div>
+		    	<div class="col-md-2 col-md-offset-1">	    	
+		    		<%= image_tag 'phase1.jpg', class: "img-responsive img-centre" %>
+		    	</div>
+		    	<div class="col-md-2">	    	
+		    		<%= image_tag 'phase2.jpg', class: "img-responsive img-centre" %>
+		    	</div>
+		    	<div class="col-md-2">	    	
+		    		<%= image_tag 'phase3.jpg', class: "img-responsive img-centre" %>
+		    	</div>
+	    	</div>
+	    	<br>
+	    	<h2>References</h2>
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<p>Peters, S. and P. Papakosta. <i>Archeological Cartographic Information System: Demonstrated for the excavation of the Diana sanctuary in Nemi.</i> Project Documentation Report. Technische Universität München, Fakultät für Bauingenieur- und Vermessungswesen, 2012</p>
+	    			<p>Storemyr, P. <i>Monitoring and risk assessment of monuments and archaeological sites in the Nemi basin, Colli Albani, Italy.</i> Project Report. Expert Center for Conservation of Monuments and Sites, 2004</p>
+	    		</div>
+	    	</div>
 	    </div>
-	    <div class="tab-pane fade" id="profile">
-	      <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+	    <div class="tab-pane fade" id="3D">
+	      <h2>Procedural modeling in archaeology</h2>
+	    	<div class="row">
+		    	<div class="col-md-6">	    		
+		      		<p>It has been proven that procedural modeling is well-suited for archaeological purposes because historical information is often only available in fragments including archaeological remains/ruins, former architectural “rules” derived from other buildings, and additional sources like archaeological texts. Therefore, to achieve the final virtual model, these fragments have to be synthesised (Müller et al., 2006a; Noghani et al., 2012). According to Müller et al. (2006a), this synthesis is predominantly done by human, thus procedural modeling and CGA shapes seems to be a good platform for the following reasons: firstly, procedural modeling offers space for testing hypotheses by adjusting defined parameters. And secondly, the rules are written in a way that they are understandable for humans also and they could be more comprehensive than many pages of textual description (Müller et al., 2006a).</p>
+		    	</div>
+		    	<div class="col-md-4 col-md-offset-1">
+		    		<%= image_tag 'door.png', class: "img-responsive img-centre" %>
+		    	</div>
+		    </div>
+		    <br>
+		    <div class="row">	    	
+		    	<div class="col-md-2 col-md-offset-1">
+		    		<%= image_tag 'CE_logo.png', class: "img-responsive img-centre" %>
+		    	</div>
+		    	<div class="col-md-7  col-md-offset-2">	    		
+		      		<p>This project is based on the CityEngine, software which was successfully introduced into the archaeological field of research (Müller et al., 2006a). The main reasons, why CityEngine was chosen for this project are the possibility of testing several hypotheses, implementation of levels of details and potential solutions for expressing the uncertainty (Haegler et al., 2009). Secondly, this tool has been already verified as a suitable environment by several projects of archaeological reconstruction.</p>
+		    	</div>
+		    </div>
+		    <br>
+		   	<h2>Work flow of the model generation</h2>
+	    	<div class="row">
+		    	<div class="col-md-6">	    		
+		      		<p>The generation of the 3D model starts with analysing the design and determining the parameters of the model. Next, the textures and colors of individual parts of the temple should be defined. Also the elements, called terminate shapes, which are modeled outside of the CityEngine procedural modeling environment should be created. In this case, a free version of 3D modeling software called SketchUp (Trimble, 2014) is used. After description of the generation of the terminate shapes, the selection of colors and textures is presented. Then, the design CGA rules have to be necessarily encoded. Creation of the rules is the most essential part of entire generation of 3D model. Finally, the 3D model is ready to be generated and published.</p>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<%= image_tag 'entablature.jpg', class: "img-responsive img-centre" %>
+		    	</div>
+		    	<div class="col-md-3">
+		    		<%= image_tag 'podium.jpg', class: "img-responsive img-centre" %>
+		    	</div>
+		    </div>
+		    <br>
+		    <h2>Levels of detail</h2>
+	    	<div class="row">
+		    	<div class="col-md-10">	    		
+		      		<p>Thanks to the characteristics of procedural modeling, it is possible to implement different levels of detail (LoDs) within one rule file. LoDs are encoded as a different parameters of an attribute and hence CityEngine user has the opportunity to switch fast between the individual levels in the Inspector window and thus adapt the visualization to his/her needs.</p>
+		    	</div>
+		    </div>
+		   	<div class="row">		   		
+		    	<h4>LoD1 - Low Detail</h4>
+		    	<div class="col-md-6">	    		
+		      		<p>This LoD shows only the colored mass model without any textures. The implementation of terminate shapes is mostly omitted and for the essential parts of the temple, like columns, the original detailed assets are replaced with simple cylindrical or cuboid elements. This view could be used for the navigation of camera or the basic perception of the temple’s characteristics.</p>
+		    	</div>
+		    	<div class="col-md-5 col-md-offset-1">
+		    		<%= image_tag 'LoD1.JPG', class: "img-responsive img-centre" %>
+		    	</div>
+		    </div>
+		    <br>
+		    <div class="row">			    	
+		    	<h4>LoD2 - Medium Detail</h4>
+		    	<div class="col-md-6">	    		
+		      		<p>Contrary to the low level of detail, medium LoD does not omit the terminate shapes and that’s why the user is getting the complete idea of the sanctuary’s visual appearance. LoD 2 includes all the statues, structure of columns, podium, etc. The colors remains the same as in LoD 1. This representation is considered as a standard for the scientific analysis and exploration of the temple.</p>
+		    	</div>		    		    	
+		    	<div class="col-md-5  col-md-offset-1">
+		    		<%= image_tag 'LoD2.JPG', class: "img-responsive img-centre" %>
+		    	</div>
+		    </div>
+		    <br>
+		    <div class="row">		    	
+		    	<h4>LoD3 - High Detail</h4>	 
+		    	<div class="col-md-6">   		
+		      		<p>The last and the most impressive visualization is provided by LoD 3. Contrary to LoD 2 it is enriched by various textures of materials. The patterns of the textures are more visible while zooming in. Thus this visualization should look as the most realistic one, almost photo realistic. Despite the criticism of photo-realistic visualizations, LoD 3 has been involved because of three reasons. Firstly, it complements the previous mentioned LoDs, next it shows the extensive possibilities of the CityEngine, and additionally it shows the temple from the different point of view which may be an advantage.</p>
+		    	</div>
+		    	<div class="col-md-5 col-md-offset-1">
+		    		<%= image_tag 'LoD3.JPG', class: "img-responsive img-centre" %>
+		    	</div>
+		    </div>
+		    <br>
+	    	<h2>References</h2>
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<p>Peters, S. and P. Papakosta. <i>Archeological Cartographic Information System: Demonstrated for the excavation of the Diana sanctuary in Nemi.</i> Project Documentation Report. Technische Universität München, Fakultät für Bauingenieur- und Vermessungswesen, 2012</p>
+	    			<p>Storemyr, P. <i>Monitoring and risk assessment of monuments and archaeological sites in the Nemi basin, Colli Albani, Italy.</i> Project Report. Expert Center for Conservation of Monuments and Sites, 2004</p>
+	    		</div>
+	    	</div>
 	    </div>
-	    <div class="tab-pane fade" id="dropdown1">
+	    <div class="tab-pane fade" id="uncertainty">
 	      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
 	    </div>
-	    <div class="tab-pane fade" id="dropdown2">
-	      <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+	    <div class="tab-pane fade" id="credits">
+	      <p></p>
+	      <div class="row">
+		    	<div class="col-md-8">
+		    		<p>This project was created by Mariana Danielov&aacute; as a master thesis at Technische Univerität München at the department of Cartography, Faculty of Civil, Geo and Environmental Engineering.</p>
+		    		<p>The main supervisor of this thesis is Dr. -Ing. Holger Kumke, the second supervisor is Dipl. -Ing. Stefan Peters.</p>
+		    		<p>Since this thesis is an interdisciplinary project it was done in cooperation with archaeologist Dr. Francesca Diosono.</p>
+		    	</div>		    		
+		    	<div class="col-md-3">	    	
+		    		<%= image_tag 'TUMLogo.png', class: "img-responsive img-centre" %>
+		    	</div>
+		    	<div class="col-md-1">	    	
+		    		<%= image_tag 'BV_Web.png', class: "img-responsive img-centre" %>
+		    	</div>
+
+	    	</div>
 	    </div>
 	  </div>
 	  <br>
